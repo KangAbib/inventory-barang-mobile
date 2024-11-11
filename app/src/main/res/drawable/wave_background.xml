@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="240dp"
+    android:viewportWidth="360"
+    android:viewportHeight="240">
+
+    <!-- Gradasi Biru -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M0,0 H360 V240 H0 Z" />
+
+    <path
+        android:fillColor="#0288D1"
+    android:pathData="M0,0 H360 V240 H0 Z" />
+
+    <path
+        android:fillColor="#03A9F4"
+    android:pathData="M0,0 H360 V240 H0 Z" />
+
+    <path
+        android:fillColor="#B3E5FC"
+    android:pathData="M0,0 H360 V240 H0 Z" />
+
+    <!-- White Wave -->
+    <path
+        android:pathData="M0,40 C90,40 90,0 180,20 S270,60 360,80 V240 H0 Z" />
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,40 C90,40 90,80 180,90 S270,100 360,80 V240 H0 Z" />
+</vector>
