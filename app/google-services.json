@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "93203195753",
+    "project_id": "inventory-barang-53f82",
+    "storage_bucket": "inventory-barang-53f82.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93203195753:android:842e045dab0f7c779a3ff8",
+        "android_client_info": {
+          "package_name": "balloh.khabib.ahmad.inventorybarang"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHx9XYrY87F-Ar2H9Vg6uM-lhn9r7opTw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
