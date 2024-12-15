@@ -28,6 +28,11 @@
             android:title="Peminjaman"/>
 
         <item
+            android:id="@+id/nav_pengembalian"
+            android:icon="@drawable/baseline_move_to_inbox_24"
+            android:title="Pengembalian"/>
+
+        <item
             android:id="@+id/nav_about"
             android:icon="@drawable/baseline_info_24"
             android:title="Tentang Kami"/>

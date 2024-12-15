@@ -93,7 +93,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@+id/edtPhone"
         app:layout_constraintTop_toBottomOf="@+id/edtPhone"
-        tools:text="Mahasiswa " />
+        android:text="Mahasiswa " />
 
     <Button
         android:id="@+id/btnContinue"
