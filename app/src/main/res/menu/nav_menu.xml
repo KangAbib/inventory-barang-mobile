@@ -33,9 +33,21 @@
             android:title="Pengembalian"/>
 
         <item
+            android:id="@+id/nav_maps"
+            android:icon="@drawable/baseline_map_24"
+            android:title="Maps"/>
+
+        <item
+            android:id="@+id/nav_chart"
+            android:icon="@drawable/baseline_insert_chart_24"
+            android:title="Chart"/>
+
+        <item
             android:id="@+id/nav_about"
             android:icon="@drawable/baseline_info_24"
             android:title="Tentang Kami"/>
+
+
     </group>
     <item
         android:title="">

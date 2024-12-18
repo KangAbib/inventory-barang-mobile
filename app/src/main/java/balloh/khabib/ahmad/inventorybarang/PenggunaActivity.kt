@@ -10,6 +10,8 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import balloh.khabib.ahmad.inventorybarang.Pengguna.HomeFragment
+import balloh.khabib.ahmad.inventorybarang.Pengguna.PeminjamanFragment
+import balloh.khabib.ahmad.inventorybarang.Pengguna.PengembalianFragment
 import com.google.android.material.navigation.NavigationView
 
 class PenggunaActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -63,6 +65,22 @@ class PenggunaActivity : AppCompatActivity(), NavigationView.OnNavigationItemSel
             R.id.nav_about -> supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, AboutFragment())
                 .commit()
+            R.id.nav_peminjaman -> supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, PeminjamanFragment())
+                .commit()
+
+            R.id.nav_pengembalian -> supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, PengembalianFragment())
+                .commit()
+            R.id.nav_maps -> {
+                val intent = Intent(this, MaplanjutActivity::class.java)
+                startActivity(intent)
+            }
+
+            R.id.nav_chart -> {
+                val intent = Intent(this, ChartActivity::class.java)
+                startActivity(intent)
+            }
 
             R.id.nav_logout -> {
                 // Logika logout, misalnya menghapus session atau kembali ke login screen

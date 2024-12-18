@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <!-- TextView untuk Peminjaman ID -->
+        <TextView
+            android:id="@+id/textViewPeminjamanId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peminjaman ID"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- TextView untuk Nama Pengguna -->
+        <TextView
+            android:id="@+id/textViewUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewPeminjamanId"
+            android:layout_marginTop="4dp" />
+
+        <!-- TextView untuk Ruang -->
+        <TextView
+            android:id="@+id/textViewRuang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ruang"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewUserName"
+            android:layout_marginTop="4dp" />
+
+        <!-- TextView untuk Barang -->
+        <TextView
+            android:id="@+id/textViewBarang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Barang"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewRuang"
+            android:layout_marginTop="4dp" />
+
+        <!-- TextView untuk Tanggal Pinjam -->
+        <TextView
+            android:id="@+id/textViewTanggalPinjam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Pinjam"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewBarang"
+            android:layout_marginTop="4dp" />
+
+        <!-- TextView untuk Tanggal Kembali -->
+        <TextView
+            android:id="@+id/textViewTanggalKembali"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Kembali"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTanggalPinjam"
+            android:layout_marginTop="4dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
