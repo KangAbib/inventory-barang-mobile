@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/itemWeb"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:icon="@drawable/baseline_monitor_24"
+        android:title="Website"
+        android:visible="true" />
+    <item
+        android:id="@+id/itemLoc"
+        android:enabled="true"
+        android:icon="@drawable/baseline_location_on_24"
+        android:title="Lokasi"
+        android:visible="true" />
+</menu>

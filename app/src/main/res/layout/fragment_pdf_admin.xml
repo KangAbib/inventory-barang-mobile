@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wave_background"
+    android:padding="16dp">
+
+    <!-- Judul Aplikasi -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Laporan Peminjaman"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Tombol Export PDF -->
+    <Button
+        android:id="@+id/btn_export_pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#0D2BD3"
+        android:padding="10dp"
+        android:text="Export ke PDF"
+        android:textColor="@android:color/white" />
+
+    <!-- Status Ekspor -->
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="14sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:gravity="center"
+        android:layout_marginTop="16dp" />
+</RelativeLayout>

@@ -107,6 +107,14 @@
             android:backgroundTint="@android:color/holo_red_light"
             android:text="Hapus" />
     </LinearLayout>
+    <Button
+        android:id="@+id/btnSortNamaBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort Nama Barang"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutActions"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutActions"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutActions" />
 
     <!-- RecyclerView untuk menampilkan daftar barang -->
     <androidx.recyclerview.widget.RecyclerView
@@ -114,7 +122,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/linearLayoutActions"
+        app:layout_constraintTop_toBottomOf="@id/btnSortNamaBarang"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

@@ -23,6 +23,7 @@ class BarangAdmin : Fragment() {
     private lateinit var btnHapus: Button
     private val barangList = mutableListOf<BarangModel>()
     private var selectedBarang: BarangModel? = null
+    private lateinit var btnSortNamaBarang: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -58,6 +59,24 @@ class BarangAdmin : Fragment() {
         // Baca data dari Firebase
         fetchBarangData(adapter)
 
+        // Inisialisasi tombol sorting
+        btnSortNamaBarang = view.findViewById(R.id.btnSortNamaBarang)
+
+        // Tambahkan listener pada tombol sorting
+        btnSortNamaBarang.setOnClickListener {
+            val isAscending = btnSortNamaBarang.text == "Sort Ascending"
+            if (isAscending) {
+                barangList.sortBy { it.nama }
+                btnSortNamaBarang.text = "Sort Descending"
+                Toast.makeText(requireContext(), "Sorted ascending by Nama Barang", Toast.LENGTH_SHORT).show()
+            } else {
+                barangList.sortByDescending { it.nama }
+                btnSortNamaBarang.text = "Sort Ascending"
+                Toast.makeText(requireContext(), "Sorted descending by Nama Barang", Toast.LENGTH_SHORT).show()
+            }
+            adapter.notifyDataSetChanged()
+        }
+
         // Tombol Tambah
         btnTambah.setOnClickListener {
             val nama = editTextNamaBarang.text.toString()
@@ -88,6 +107,7 @@ class BarangAdmin : Fragment() {
                 Toast.makeText(requireContext(), "Pilih barang untuk dihapus", Toast.LENGTH_SHORT).show()
             }
         }
+
 
         return view
     }

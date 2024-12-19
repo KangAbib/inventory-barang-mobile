@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Manajemen Informatika</string>
+    <string name="app_name">Inventory Barang</string>
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
 </resources>

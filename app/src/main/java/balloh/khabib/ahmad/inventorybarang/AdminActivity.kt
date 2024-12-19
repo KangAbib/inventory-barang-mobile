@@ -10,8 +10,11 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import balloh.khabib.ahmad.inventorybarang.Admin.BarangAdmin
+import balloh.khabib.ahmad.inventorybarang.Admin.ChatFragmentAdmin
 import balloh.khabib.ahmad.inventorybarang.Admin.HomeAdmin
+import balloh.khabib.ahmad.inventorybarang.Admin.PDFadmin
 import balloh.khabib.ahmad.inventorybarang.Admin.RuangAdmin
+import balloh.khabib.ahmad.inventorybarang.Pengguna.ChatFragment
 import com.google.android.material.navigation.NavigationView
 
 class AdminActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -60,6 +63,14 @@ class AdminActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
                 R.id.nav_ruang -> supportFragmentManager.beginTransaction()
                     .replace(R.id.fragment_container, RuangAdmin())
+                    .commit()
+
+                R.id.nav_pdf -> supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container, PDFadmin())
+                    .commit()
+
+                R.id.nav_chat -> supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container, ChatFragmentAdmin())
                     .commit()
 
 
