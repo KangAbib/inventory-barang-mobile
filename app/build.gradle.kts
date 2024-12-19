@@ -14,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId = "balloh.khabib.ahmad.inventorybarang"
-        minSdk = 35
+        minSdk = 27
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -56,8 +56,9 @@ dependencies {
     implementation ("com.google.android.material:material:1.10.0")
     implementation ("com.itextpdf:itext7-core:7.2.3")
 
-    implementation ( "androidx.pdf:pdf-viewer-fragment:1.0.0-alpha02")
+//    implementation ( "androidx.pdf:pdf-viewer-fragment:1.0.0-alpha02")
 
+    implementation("com.itextpdf:itext7-core:7.2.3")
 
 
     implementation(libs.androidx.core.ktx)

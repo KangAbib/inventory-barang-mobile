@@ -63,17 +63,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewTanggalPengembalian" />
 
-    <!-- Button Submit Pengembalian -->
+    <!-- Buttons for Pengembalian and Denda -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
     <Button
         android:id="@+id/buttonSubmitPengembalian"
-        android:layout_width="180dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:text="Submit Pengembalian"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDenda"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextTanggalPengembalian" />
 
+    <Button
+        android:id="@+id/buttonDenda"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Denda"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonSubmitPengembalian"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonSubmitPengembalian"
+        app:layout_constraintTop_toTopOf="@+id/buttonSubmitPengembalian" />
+
+    <!-- RecyclerView untuk Barang Dikembalikan -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewBarangDikembalikan"
         android:layout_width="0dp"

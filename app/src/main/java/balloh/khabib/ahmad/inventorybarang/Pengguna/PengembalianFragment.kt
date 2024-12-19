@@ -1,5 +1,7 @@
 package balloh.khabib.ahmad.inventorybarang.Pengguna
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -18,6 +20,7 @@ class PengembalianFragment : Fragment() {
     private lateinit var recyclerViewDipinjam: RecyclerView
     private lateinit var recyclerViewDikembalikan: RecyclerView
     private lateinit var buttonSubmit: Button
+    private lateinit var buttonDenda: Button // Tambahkan Button Denda
     private lateinit var editTextTanggalPengembalian: EditText
     private lateinit var barangAdapter: BarangAdapter
     private lateinit var pengembalianAdapter: PengembalianAdapter
@@ -32,10 +35,11 @@ class PengembalianFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.activity_pengembalian, container, false)
 
-        // Inisialisasi RecyclerView
+        // Inisialisasi RecyclerView dan Button
         recyclerViewDipinjam = view.findViewById(R.id.recyclerViewBarangDipinjam)
         recyclerViewDikembalikan = view.findViewById(R.id.recyclerViewBarangDikembalikan)
         buttonSubmit = view.findViewById(R.id.buttonSubmitPengembalian)
+        buttonDenda = view.findViewById(R.id.buttonDenda) // Inisialisasi buttonDenda
         editTextTanggalPengembalian = view.findViewById(R.id.editTextTanggalPengembalian)
 
         // Setup RecyclerView untuk barang yang dipinjam
@@ -68,7 +72,19 @@ class PengembalianFragment : Fragment() {
             }
         }
 
+        // Aksi tombol denda
+        buttonDenda.setOnClickListener {
+            openDendaLink()
+        }
+
         return view
+    }
+
+    // Membuka link denda menggunakan Intent
+    private fun openDendaLink() {
+        val dendaUrl = "https://app.sandbox.midtrans.com/payment-links/1734576671375"
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(dendaUrl))
+        startActivity(intent)
     }
 
     // Mengambil data barang yang dipinjam dengan status "Sedang Pinjam"

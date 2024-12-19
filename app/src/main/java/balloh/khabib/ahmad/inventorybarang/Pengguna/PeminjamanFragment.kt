@@ -93,6 +93,8 @@ class PeminjamanFragment : Fragment() {
             submitPeminjaman()
         }
 
+
+
         // Button untuk menambah barang
         buttonTambahBarang.setOnClickListener {
             val selectedBarang = spinnerBarang.selectedItem.toString()
